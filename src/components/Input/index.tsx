@@ -1,9 +1,34 @@
-import React, { FC } from "react";
+"use client";
+
+import React, { ChangeEvent, FC, useState } from "react";
 
 import styles from "./index.module.scss";
 import { InputProps } from "./types";
+import { Hide } from "@/assets";
 
-const Input: FC<InputProps> = ({ type = "text", label, id, placeholder }) => {
+const Input: FC<InputProps> = ({
+  type = "text",
+  label,
+  id,
+  placeholder,
+  name,
+  onChange,
+}) => {
+  const [localType, setLocalType] = useState(type);
+
+  const togglePasswordVisibility = () => {
+    setLocalType((prev) => (prev === "password" ? "text" : "password"));
+  };
+
+  const handleOnChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const value = event.currentTarget.value;
+    const field = {
+      [name]: value,
+    };
+
+    onChange(field);
+  };
+
   return (
     <div className={styles.container}>
       {label && (
@@ -11,12 +36,24 @@ const Input: FC<InputProps> = ({ type = "text", label, id, placeholder }) => {
           {label}
         </label>
       )}
-      <input
-        type={type}
-        id={id}
-        className={styles.input}
-        placeholder={placeholder}
-      />
+      <div className={styles.inputHide}>
+        <input
+          type={localType}
+          id={id}
+          className={styles.input}
+          placeholder={placeholder}
+          onChange={handleOnChange}
+        />
+        {type === "password" && (
+          <button
+            className={styles.hide}
+            type="button"
+            onClick={togglePasswordVisibility}
+          >
+            <img src={Hide.src} />
+          </button>
+        )}
+      </div>
     </div>
   );
 };

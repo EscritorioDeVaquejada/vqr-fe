@@ -5,4 +5,7 @@ export type InputProps = {
   label?: string;
   id?: string;
   placeholder?: string;
+  name: string;
+  value?: string;
+  onChange?: any;
 };
