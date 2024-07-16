@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.label {
+  font-size: 1.2rem;
+  width: 100%;
+}
+
+.input {
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 2px solid #e7e8ea;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input::placeholder {
+  color: #6a6b74;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.inputHide {
+  position: relative;
+}
+
+.hide {
+  background-color: transparent;
+  width: fit-content;
+  height: fit-content;
+  padding: 0.4rem;
+  position: absolute;
+  top: 19%;
+  right: 1rem;
+  border: none;
+  cursor: pointer;
+  img {
+    height: 1.2rem;
+  }
+}
