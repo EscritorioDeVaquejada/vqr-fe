@@ -1,0 +1,33 @@
+.container {
+  display: grid;
+  grid-template-columns: 20rem 1fr;
+  height: 100vh;
+}
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #dadbdd;
+  justify-content: space-between;
+  height: 100%;
+  padding: 3rem 0;
+  box-sizing: border-box;
+}
+
+.brandHeadingContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.heading {
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.pageDisplay {
+  font-size: 2rem;
+  text-align: center;
+  letter-spacing: 2px;
+}

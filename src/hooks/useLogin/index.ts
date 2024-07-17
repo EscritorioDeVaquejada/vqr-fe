@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 
 import defaultFields from "./data";
 
@@ -23,11 +23,15 @@ const useLogin = () => {
     setPassword({ value: value.password, invalidText: errorMessage });
   };
 
-  const submitLogin = () => {
-    const validated = LoginZod({ username, password });
+  const submitLogin = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const validated = LoginZod.safeParse({ username, password });
+
+    if (!validated.success) {
+    }
   };
 
-  return { handleUsername, handlePassword, username, password };
+  return { handleUsername, handlePassword, submitLogin, username, password };
 };
 
 export default useLogin;

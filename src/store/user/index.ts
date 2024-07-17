@@ -3,16 +3,16 @@ import { create } from "zustand";
 import { fetch } from "@/services";
 import { VQR_BACKEND } from "@/constants";
 
-import { LogInUserParams, UserState } from "./types";
+import { LogInUserParams, UserState, UserStore } from "./types";
 
-const useUserStore = create((set) => ({
+const useUserStore = create<UserStore>((set) => ({
   isLoggedIn: false,
   logIn: async (credentials: LogInUserParams) => {
     const response = await fetch.post(VQR_BACKEND, { ...credentials });
 
     set((_state: UserState) => ({ isLoggedIn: true }));
   },
-  logout: () => set((_state: UserState) => ({ isLoggedIn: false })),
+  logOut: () => set((_state: UserState) => ({ isLoggedIn: false })),
 }));
 
 export default useUserStore;
