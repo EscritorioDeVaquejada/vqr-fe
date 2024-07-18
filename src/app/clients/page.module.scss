@@ -1,3 +1,13 @@
 .container {
   padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.searchAddContainer {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  gap: 1rem;
+  width: 100%;
 }

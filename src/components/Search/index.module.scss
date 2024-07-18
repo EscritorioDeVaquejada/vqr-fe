@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  background-color: #f4f5fb;
+  border-radius: 0.4rem;
+}
+
+.input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+  padding: 1rem;
+  &:focus {
+    outline: none;
+  }
+}
+
+.searchButton {
+  background-color: transparent;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+}

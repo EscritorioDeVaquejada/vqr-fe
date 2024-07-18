@@ -1,7 +1,10 @@
 "use client";
+import React, { ChangeEvent } from "react";
 
 import useClientsStore from "@/store/clients";
-import React, { ChangeEvent } from "react";
+import { Search as SearchSVG } from "@/assets";
+
+import styles from "./index.module.scss";
 
 const Search = () => {
   const { filterClients } = useClientsStore();
@@ -11,8 +14,11 @@ const Search = () => {
   };
 
   return (
-    <div>
-      <input type="text" onChange={handleSearch} />
+    <div className={styles.container}>
+      <input type="text" className={styles.input} onChange={handleSearch} />
+      <button className={styles.searchButton}>
+        <img src={SearchSVG.src} />
+      </button>
     </div>
   );
 };

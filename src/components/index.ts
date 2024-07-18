@@ -3,3 +3,4 @@ export { default as Button } from "./Button";
 export { default as Brand } from "./Brand";
 export * from "./lists";
 export { default as Search } from "./Search";
+export { default as Heading } from "./Heading";
