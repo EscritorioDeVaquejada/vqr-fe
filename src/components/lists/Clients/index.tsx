@@ -1,14 +1,25 @@
 "use client";
 
-import React, { FC, useEffect } from "react";
+import React, { FC, useEffect, useState } from "react";
 
 import { CardProps, ClientsListProps } from "./types";
 import styles from "./index.module.scss";
 import useClientsStore from "@/store/clients";
 
+const Menu = () => {
+  return <div className={styles.menu}>Menu</div>;
+};
+
 const Card: FC<CardProps> = ({ client }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleOpenMenu = () => {
+    setIsMenuOpen((prev) => !prev);
+  };
+
   return (
     <li className={styles.cardContainer}>
+      {isMenuOpen && <Menu />}
       <div className={styles.cardPictureInfoContainer}>
         <img className={styles.picture} src={client.profilePicture.src} />
         <div className={styles.cardInfo}>
@@ -18,7 +29,11 @@ const Card: FC<CardProps> = ({ client }) => {
           >{`${client.numberOfEvents} Eventos`}</span>
         </div>
       </div>
-      <button type="button" className={styles.menuButton}>
+      <button
+        type="button"
+        className={styles.menuButton}
+        onClick={toggleOpenMenu}
+      >
         <span />
         <span />
         <span />

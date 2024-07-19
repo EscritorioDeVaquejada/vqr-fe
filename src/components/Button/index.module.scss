@@ -6,6 +6,8 @@
   gap: 0.5rem;
   align-content: center;
   justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .primary {
@@ -31,5 +33,5 @@
 }
 
 .fitContent {
-  width: fit-content;
+  width: fit-content !important;
 }

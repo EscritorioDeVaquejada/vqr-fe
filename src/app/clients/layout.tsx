@@ -26,11 +26,15 @@ const layout: FC<LayoutProps> = ({ children, ...props }) => {
     }
   };
 
+  const getSubHeading = () => {};
+
   return (
     <div className={styles.container}>
       <aside className={styles.aside}>
         <Heading statement={getHeadingStatement()} />
-        <h3 className={styles.pageDisplay}>Clientes</h3>
+        {currentPath === "clients" && (
+          <h3 className={styles.pageDisplay}>Clientes</h3>
+        )}
       </aside>
       <main className={styles.main}>{children}</main>
     </div>

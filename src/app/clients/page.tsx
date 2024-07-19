@@ -16,6 +16,8 @@ const page = () => {
           type="button"
           icon={PlusCircle.src}
           iconPosition="left"
+          width="17rem"
+          href="/clients/create"
         />
       </div>
       <ClientsList clients={clients} />

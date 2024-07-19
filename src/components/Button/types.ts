@@ -8,4 +8,11 @@ export type ButtonProps = {
   icon?: string;
   iconPosition?: "left" | "right";
   isFullWidth?: boolean;
+  width?: string;
+  href?: string;
+  onClick?: () => void;
+};
+
+export type WrapperProps = ButtonProps & {
+  children: ReactNode[];
 };

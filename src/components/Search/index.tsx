@@ -15,7 +15,12 @@ const Search = () => {
 
   return (
     <div className={styles.container}>
-      <input type="text" className={styles.input} onChange={handleSearch} />
+      <input
+        type="text"
+        className={styles.input}
+        onChange={handleSearch}
+        placeholder="Buscar"
+      />
       <button className={styles.searchButton}>
         <img src={SearchSVG.src} />
       </button>

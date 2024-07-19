@@ -6,8 +6,7 @@
 }
 
 .searchAddContainer {
-  display: grid;
-  grid-template-columns: 80% 20%;
+  display: flex;
   gap: 1rem;
   width: 100%;
 }
