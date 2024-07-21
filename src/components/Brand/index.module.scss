@@ -8,3 +8,30 @@
 .brand {
   font-size: 3rem;
 }
+
+.small {
+  img {
+    height: 3rem;
+  }
+  h1 {
+    font-size: 1rem;
+  }
+}
+
+.medium {
+  img {
+    height: 6.5rem;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+.large {
+  img {
+    height: 9rem;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+}

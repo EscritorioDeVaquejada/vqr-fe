@@ -8,7 +8,7 @@ import { HeadingProps } from "./types";
 const Heading: FC<HeadingProps> = ({ statement }) => {
   return (
     <div className={styles.brandHeadingContainer}>
-      <Brand />
+      <Brand size="medium" />
       <h2 className={styles.heading}>{statement}</h2>
     </div>
   );
