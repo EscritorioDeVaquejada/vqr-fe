@@ -1,11 +1,45 @@
 .button {
   padding: 1rem;
-  font-size: 1.2rem;
   border-radius: 0.5rem;
   border: none;
+  display: flex;
+  gap: 0.5rem;
+  align-content: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .primary {
   background-color: #f27d33;
   color: #fff;
+  border: 1px solid #f27d33;
+}
+
+.secondary {
+  background-color: #fff;
+  border: 1px solid #dadbdd;
+  border-radius: 0.6rem;
+}
+
+.tertiary {
+  background-color: #e2e8f0;
+}
+
+.disabled {
+  filter: opacity(50%);
+}
+
+.icon {
+  height: 1.4rem;
+  width: 1.4rem;
+}
+
+.label {
+  font-size: 1.2rem;
+  align-self: center;
+}
+
+.fitContent {
+  width: fit-content !important;
 }

@@ -6,7 +6,7 @@ export const LoginZod = z.object({
   username: z.object({
     value: z
       .string({ required_error: "Campo obrigatorio" })
-      .min(4, { message: "Minimo de 4 caracteres" })
+      .min(3, { message: "Minimo de 3 caracteres" })
       .max(100, { message: "Maximo de 100 caracteres" }),
     invalidText: z.string().optional(),
   }),
