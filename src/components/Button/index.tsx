@@ -29,7 +29,7 @@ const Wrapper: FC<WrapperProps> = ({
           style={{
             ...(width && { width }),
           }}
-          href={href}
+          href={isDisabled ? "#" : href}
         >
           {children}
         </Link>
@@ -41,6 +41,7 @@ const Wrapper: FC<WrapperProps> = ({
             ...(width && { width }),
           }}
           onClick={onClick}
+          disabled={isDisabled}
         >
           {children}
         </button>
