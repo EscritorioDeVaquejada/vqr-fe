@@ -1,0 +1,97 @@
+.list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+}
+
+.cardContainer {
+  display: flex;
+  border-radius: 0.4rem;
+  border: 1px solid #dadbdd;
+  padding: 2rem;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.cardInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.name,
+.numberOfEvents {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.name {
+  color: #000;
+}
+
+.numberOfEvents {
+  color: #6a6b74;
+}
+
+.menuButton {
+  border-radius: 10rem;
+  width: 2rem;
+  height: 2rem;
+  min-width: 2rem;
+  min-height: 2rem;
+  background-color: #f27d33;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.15rem;
+  cursor: pointer;
+  justify-self: flex-end;
+  span {
+    background-color: #fff;
+    border-radius: 5rem;
+    width: 0.3rem;
+    height: 0.3rem;
+  }
+}
+
+.menu {
+  position: absolute;
+  display: flex;
+  top: 50%;
+  right: 4rem;
+  width: 10rem;
+  height: 8rem;
+  background-color: #fff;
+  border-radius: 0.4rem;
+  border: 1px solid #dadbdd;
+  padding: 1rem;
+  z-index: 2;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 2500px) {
+  .list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 1915px) {
+  .list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1480px) {
+  .list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1090px) {
+  .list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

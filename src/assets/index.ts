@@ -5,3 +5,5 @@ export { default as Search } from "./search.svg";
 export { default as PlusCircle } from "./plus-circle.svg";
 export { default as ArrowLeft } from "./arrow-left.svg";
 export { default as PhotoPlus } from "./photo-plus.svg";
+export { default as ClientProfilePictureLarge } from "./client-profile-picture-large.png";
+export { default as ClientProfilePicture } from "./client-profile-picture.png";
