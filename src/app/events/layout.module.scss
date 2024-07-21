@@ -9,7 +9,7 @@
   flex-direction: column;
   border: 1px solid #dadbdd;
   justify-content: space-between;
-  padding: 3rem 0;
+  padding: 3rem 1rem;
 }
 
 .pageDisplay {
@@ -29,4 +29,24 @@
   &::-webkit-scrollbar-thumb {
     background: #7ab3f58c;
   }
+}
+
+.profilePictureNameContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.profilePicture {
+  height: 13rem;
+  width: 13rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+}
+
+.name {
+  font-size: 1.3rem;
+  text-align: center;
 }

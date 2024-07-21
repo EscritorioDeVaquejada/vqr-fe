@@ -1,10 +1,4 @@
-import { StaticImageData } from "next/image";
-
-type Client = {
-  name: string;
-  numberOfEvents: number;
-  profilePicture: any;
-};
+import { Client } from "@/store/clients/types";
 
 export type CardProps = {
   client: Client;
@@ -12,4 +6,8 @@ export type CardProps = {
 
 export type ClientsListProps = {
   clients: Client[];
+};
+
+export type MenuProps = {
+  client: Client;
 };

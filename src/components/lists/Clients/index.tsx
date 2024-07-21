@@ -1,13 +1,21 @@
 "use client";
 
 import React, { FC, useEffect, useState } from "react";
+import Link from "next/link";
 
-import { CardProps, ClientsListProps } from "./types";
+import { CardProps, ClientsListProps, MenuProps } from "./types";
 import styles from "./index.module.scss";
-import useClientsStore from "@/store/clients";
 
-const Menu = () => {
-  return <div className={styles.menu}>Menu</div>;
+import { useClientsStore } from "@/store";
+
+const Menu: FC<MenuProps> = ({ client }) => {
+  const { selectClient } = useClientsStore();
+
+  return (
+    <div className={styles.menu}>
+      <Link href={`/events/${client.username}`}>Eventos</Link>
+    </div>
+  );
 };
 
 const Card: FC<CardProps> = ({ client }) => {
@@ -19,7 +27,7 @@ const Card: FC<CardProps> = ({ client }) => {
 
   return (
     <li className={styles.cardContainer}>
-      {isMenuOpen && <Menu />}
+      {isMenuOpen && <Menu client={client} />}
       <div className={styles.cardPictureInfoContainer}>
         <img className={styles.picture} src={client.profilePicture.src} />
         <div className={styles.cardInfo}>

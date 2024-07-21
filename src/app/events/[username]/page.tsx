@@ -1,26 +1,27 @@
 import React from "react";
 
-import { Button, ClientsList, Search } from "@/components";
-
-import styles from "./page.module.scss";
-import clients from "@/store/clients/data";
 import { PlusCircle } from "@/assets";
+import { Button, EventsList, Search } from "@/components";
 
-const page = () => {
+import events from "@/store/events/data";
+import styles from "./page.module.scss";
+import { PageProps } from "./types";
+
+const page = ({ params }: PageProps) => {
   return (
     <div className={styles.container}>
       <div className={styles.searchAddContainer}>
         <Search />
         <Button
-          label="Adicionar Cliente"
+          label="Adicionar Evento"
           type="button"
           icon={PlusCircle.src}
           iconPosition="left"
           width="17rem"
-          href="/clients/create"
+          href="/events/create"
         />
       </div>
-      <ClientsList clients={clients} />
+      <EventsList events={events} />
     </div>
   );
 };

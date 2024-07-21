@@ -1,7 +1,7 @@
 "use client";
 import React, { ChangeEvent } from "react";
 
-import useClientsStore from "@/store/clients";
+import { useClientsStore } from "@/store";
 import { Search as SearchSVG } from "@/assets";
 
 import styles from "./index.module.scss";

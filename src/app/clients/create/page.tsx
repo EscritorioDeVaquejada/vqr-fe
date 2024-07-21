@@ -6,7 +6,7 @@ import { ArrowLeft } from "@/assets";
 
 import styles from "./page.module.scss";
 import PhotoUploader from "@/components/PhotoUploader";
-import useNewClientStore from "@/store/newClient";
+import { useNewClientStore } from "@/store";
 import MultiButton from "@/components/MultiButton";
 
 const page = () => {
