@@ -1,6 +1,6 @@
 "use client";
 
-import React, { FC } from "react";
+import React, { FC, useEffect } from "react";
 import { usePathname } from "next/navigation";
 
 import styles from "./layout.module.scss";
@@ -14,19 +14,17 @@ const layout: FC<LayoutProps> = ({ children, ...props }) => {
 
   const getHeadingStatement = () => {
     switch (currentPath) {
-      case "clients": {
+      case "events": {
         return "Sistema de Gerenciamente de Vaquejadas";
       }
-      case "create": {
-        return "Realize o Cadastro do Cliente para poder Gerenciar seus eventos.";
+      case "new": {
+        return "Adicione um Evento para poder gerenciar sua Vaquejada";
       }
       default: {
         return "Sistema de Gerenciamente de Vaquejadas";
       }
     }
   };
-
-  const getSubHeading = () => {};
 
   return (
     <div className={styles.container}>
