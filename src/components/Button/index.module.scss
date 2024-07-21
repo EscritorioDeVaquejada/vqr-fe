@@ -22,6 +22,14 @@
   border-radius: 0.6rem;
 }
 
+.tertiary {
+  background-color: #e2e8f0;
+}
+
+.disabled {
+  filter: opacity(50%);
+}
+
 .icon {
   height: 1.4rem;
   width: 1.4rem;

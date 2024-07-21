@@ -10,43 +10,44 @@ const Wrapper: FC<WrapperProps> = ({
   isFullWidth = true,
   width,
   href,
+  isDisabled,
   children,
   onClick,
-}) => (
-  <>
-    {href ? (
-      <Link
-        type={type}
-        className={`${styles.button} ${
-          color === "primary" ? styles.primary : ""
-        }${color === "secondary" ? styles.secondary : ""}${
-          !isFullWidth ? styles.fitContent : ""
-        }`}
-        style={{
-          ...(width && { width }),
-        }}
-        href={href}
-      >
-        {children}
-      </Link>
-    ) : (
-      <button
-        type={type}
-        className={`${styles.button} ${
-          color === "primary" ? styles.primary : ""
-        }${color === "secondary" ? styles.secondary : ""}${
-          !isFullWidth ? styles.fitContent : ""
-        }`}
-        style={{
-          ...(width && { width }),
-        }}
-        onClick={onClick}
-      >
-        {children}
-      </button>
-    )}
-  </>
-);
+}) => {
+  const primary = color === "primary" ? styles.primary : "";
+  const secondary = color === "secondary" ? styles.secondary : "";
+  const tertiary = color === "tertiary" ? styles.tertiary : "";
+  const fullWidth = !isFullWidth ? styles.fitContent : "";
+  const disabled = isDisabled ? styles.disabled : "";
+
+  return (
+    <>
+      {href ? (
+        <Link
+          type={type}
+          className={`${styles.button} ${primary} ${secondary} ${tertiary} ${fullWidth} ${disabled}`}
+          style={{
+            ...(width && { width }),
+          }}
+          href={href}
+        >
+          {children}
+        </Link>
+      ) : (
+        <button
+          type={type}
+          className={`${styles.button} ${primary} ${secondary} ${tertiary} ${fullWidth} ${disabled}`}
+          style={{
+            ...(width && { width }),
+          }}
+          onClick={onClick}
+        >
+          {children}
+        </button>
+      )}
+    </>
+  );
+};
 
 const Button: FC<ButtonProps> = ({ label, icon, iconPosition, ...rest }) => (
   <Wrapper icon={icon} iconPosition={iconPosition} label={label} {...rest}>

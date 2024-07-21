@@ -42,6 +42,11 @@ export default [
     profilePicture: ProfilePicture,
   },
   {
+    name: "Andreia do Carmo Nogueira",
+    numberOfEvents: 4,
+    profilePicture: ProfilePicture,
+  },
+  {
     name: "Jose Carlos Alberto do Carmo",
     numberOfEvents: 4,
     profilePicture: ProfilePicture,
