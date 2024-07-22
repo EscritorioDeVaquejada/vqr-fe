@@ -5,3 +5,5 @@ export * from "./lists";
 export { default as Search } from "./Search";
 export { default as Heading } from "./Heading";
 export { default as PhotoUploader } from "./PhotoUploader";
+export { default as Menu } from "./Menu";
+export { default as Tickets } from "./Tickets";

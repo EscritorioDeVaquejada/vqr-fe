@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ButtonProps, WrapperProps } from "./types";
 
 import styles from "./index.module.scss";
+import Image from "next/image";
 
 const Wrapper: FC<WrapperProps> = ({
   type,
@@ -17,6 +18,7 @@ const Wrapper: FC<WrapperProps> = ({
   const primary = color === "primary" ? styles.primary : "";
   const secondary = color === "secondary" ? styles.secondary : "";
   const tertiary = color === "tertiary" ? styles.tertiary : "";
+  const alert = color === "alert" ? styles.alert : "";
   const fullWidth = !isFullWidth ? styles.fitContent : "";
   const disabled = isDisabled ? styles.disabled : "";
 
@@ -25,7 +27,7 @@ const Wrapper: FC<WrapperProps> = ({
       {href ? (
         <Link
           type={type}
-          className={`${styles.button} ${primary} ${secondary} ${tertiary} ${fullWidth} ${disabled}`}
+          className={`${styles.button} ${primary} ${secondary} ${tertiary} ${alert} ${fullWidth} ${disabled}`}
           style={{
             ...(width && { width }),
           }}
@@ -36,7 +38,7 @@ const Wrapper: FC<WrapperProps> = ({
       ) : (
         <button
           type={type}
-          className={`${styles.button} ${primary} ${secondary} ${tertiary} ${fullWidth} ${disabled}`}
+          className={`${styles.button} ${primary} ${secondary} ${tertiary} ${alert} ${fullWidth} ${disabled}`}
           style={{
             ...(width && { width }),
           }}
@@ -52,9 +54,25 @@ const Wrapper: FC<WrapperProps> = ({
 
 const Button: FC<ButtonProps> = ({ label, icon, iconPosition, ...rest }) => (
   <Wrapper icon={icon} iconPosition={iconPosition} label={label} {...rest}>
-    {iconPosition === "left" && <img src={icon} className={styles.icon} />}
+    {iconPosition === "left" && icon && (
+      <Image
+        src={icon}
+        width={24}
+        height={24}
+        alt="icon"
+        className={styles.icon}
+      />
+    )}
     {label && <span className={styles.label}>{label}</span>}
-    {iconPosition === "right" && <img src={icon} className={styles.icon} />}
+    {iconPosition === "right" && icon && (
+      <Image
+        src={icon}
+        width={24}
+        height={24}
+        alt="icon"
+        className={styles.icon}
+      />
+    )}
   </Wrapper>
 );
 

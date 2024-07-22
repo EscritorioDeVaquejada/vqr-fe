@@ -1,7 +1,11 @@
-import Image from "next/image";
-
+import { Tickets } from "@/components";
 import styles from "./page.module.scss";
 
 export default function Home() {
-  return <h1>Test</h1>;
+  return (
+    <div className={styles.container}>
+      <h1 className={styles.heading}>Nome do Evento</h1>
+      <Tickets />
+    </div>
+  );
 }
