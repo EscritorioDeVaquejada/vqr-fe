@@ -36,8 +36,6 @@ const layout: FC<LayoutProps> = ({ children, ...props }) => {
     getProfilePicture().then();
   }, []);
 
-  console.log({ client: client?.profilePicture.src });
-
   return (
     <div className={styles.container}>
       <aside className={styles.aside}>

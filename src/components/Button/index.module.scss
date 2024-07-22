@@ -8,6 +8,7 @@
   justify-content: center;
   text-decoration: none;
   cursor: pointer;
+  height: fit-content;
 }
 
 .primary {
@@ -26,14 +27,18 @@
   background-color: #e2e8f0;
 }
 
+.alert {
+  background-color: #e93e3e;
+  color: #fff;
+}
+
 .disabled {
   filter: opacity(50%);
   cursor: not-allowed;
 }
 
 .icon {
-  height: 1.4rem;
-  width: 1.4rem;
+  align-self: center;
 }
 
 .label {

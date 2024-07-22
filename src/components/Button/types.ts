@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 export type ButtonProps = {
   type: "button" | "submit";
   label?: string;
-  color?: "primary" | "secondary" | "tertiary";
+  color?: "primary" | "secondary" | "tertiary" | "alert";
   isDisabled?: boolean;
   icon?: string;
   iconPosition?: "left" | "right";
