@@ -1,0 +1,77 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 25rem;
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #7ab3f58c;
+  }
+}
+
+.form {
+  padding: 6rem 2rem 2rem 2rem;
+  position: sticky;
+  top: 4rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sideListContainer {
+  background-color: #f4f5fb;
+  padding: 4rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.listHeading {
+  font-size: 2rem;
+}
+
+.listLegendContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.legend {
+  display: flex;
+  gap: 1rem;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.legendColor {
+  background-color: #f27d33;
+  width: 3.5rem;
+  height: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.quarterRow {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  gap: 1rem;
+  box-sizing: border-box;
+}
+
+.rowTree {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  gap: 1rem;
+}
+
+.inputCheckboxContainer {
+  display: grid;
+  grid-template-columns: 1fr 6rem;
+  gap: 1rem;
+}

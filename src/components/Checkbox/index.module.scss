@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-size: 1.2rem;
+}
+
+.checkbox {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 0.7rem;
+  border: 2px solid #dadbdd;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: #f27d33;
+}

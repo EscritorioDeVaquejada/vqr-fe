@@ -7,7 +7,7 @@ import { ArrowLeft } from "@/assets";
 import styles from "./page.module.scss";
 
 import { useNewClientStore } from "@/store";
-import MultiButton from "@/components/MultiButton";
+import { Multi } from "@/components";
 
 const page = () => {
   const {} = useNewClientStore();
@@ -54,10 +54,10 @@ const page = () => {
           label="Valor Inicial da Senha"
           placeholder="0"
         />
-        <MultiButton>
+        <Multi>
           <Button type="button" label="Cancelar" color="tertiary" />
           <Button type="button" label="Confirmar" isDisabled />
-        </MultiButton>
+        </Multi>
       </form>
     </div>
   );
