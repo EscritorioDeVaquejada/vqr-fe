@@ -7,7 +7,7 @@ import { ArrowLeft } from "@/assets";
 import styles from "./page.module.scss";
 import PhotoUploader from "@/components/PhotoUploader";
 import { useNewClientStore } from "@/store";
-import MultiButton from "@/components/MultiButton";
+import { Multi } from "@/components";
 
 const page = () => {
   const {} = useNewClientStore();
@@ -32,10 +32,10 @@ const page = () => {
         <Input name="name" label="Nome" placeholder="Informe seu nome" />
         <Input name="cpf" label="CPF" placeholder="000000000-00" />
         <Input name="address" label="Endereco" />
-        <MultiButton>
+        <Multi>
           <Button type="button" label="Cancelar" color="tertiary" />
           <Button type="button" label="Confirmar" isDisabled />
-        </MultiButton>
+        </Multi>
       </form>
     </div>
   );

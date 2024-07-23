@@ -20,15 +20,6 @@
 }
 
 .main {
-  overflow-y: scroll;
   width: 100%;
-  &::-webkit-scrollbar {
-    width: 10px;
-  }
-  &::-webkit-scrollbar-track {
-    background-color: transparent;
-  }
-  &::-webkit-scrollbar-thumb {
-    background: #7ab3f58c;
-  }
+  height: 100vh;
 }

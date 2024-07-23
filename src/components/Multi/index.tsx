@@ -1,9 +1,9 @@
 import React, { FC } from "react";
 
 import styles from "./index.module.scss";
-import { MultiButtonProps } from "./types";
+import { MultiProps } from "./types";
 
-const MultiButton: FC<MultiButtonProps> = ({ children }) => {
+const Multi: FC<MultiProps> = ({ children }) => {
   const numberOfButtons = children.length;
 
   return (
@@ -16,4 +16,4 @@ const MultiButton: FC<MultiButtonProps> = ({ children }) => {
   );
 };
 
-export default MultiButton;
+export default Multi;
