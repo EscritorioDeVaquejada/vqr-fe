@@ -7,7 +7,6 @@ import { CheckboxProps } from "./types";
 
 const Checkbox: FC<CheckboxProps> = ({ label, id, value, onChange }) => {
   const toggleValue = (event: ChangeEvent<HTMLButtonElement>) => {
-    console.log("test");
     event.preventDefault();
     onChange();
   };

@@ -7,8 +7,6 @@ const useTicketsAttributeStore = create<TicketAttributeStore>((set, get) => ({
   toggleBoiTV: () => {
     const boiTV = get().ticket?.boiTV;
 
-    console.log({ boiTV });
-
     set(() => ({ ticket: { boiTV: !boiTV } }));
   },
 }));
