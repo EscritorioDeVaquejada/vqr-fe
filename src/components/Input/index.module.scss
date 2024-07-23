@@ -42,3 +42,14 @@
     height: 1.2rem;
   }
 }
+
+.inputHintContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.hint {
+  font-size: 0.9rem;
+  color: #83929e;
+}

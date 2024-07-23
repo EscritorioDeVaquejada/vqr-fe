@@ -1,11 +1,11 @@
 "use client";
 
-import React, { FC } from "react";
+import React, { FC, useEffect } from "react";
 
 import styles from "./index.module.scss";
-import { CellProps } from "./types";
+import { CellProps, TicketsProps } from "./types";
 
-import tickets from "./data";
+import useTicketsStore from "@/store/tickets";
 
 const Cell: FC<CellProps> = ({ ticket, index }) => {
   const selected = ticket.isSelected ? styles.listItemSelected : "";
@@ -17,9 +17,17 @@ const Cell: FC<CellProps> = ({ ticket, index }) => {
   );
 };
 
-const Tickets = () => {
+const Tickets: FC<TicketsProps> = ({ size }) => {
+  const { tickets, getTickets } = useTicketsStore();
+
+  const isSmallList = size === "small" ? styles.listSmall : "";
+
+  useEffect(() => {
+    getTickets().then();
+  }, []);
+
   return (
-    <ul className={styles.list}>
+    <ul className={`${styles.list} ${isSmallList}`}>
       {tickets.map((ticket, index) => (
         <Cell ticket={ticket} index={index} key={index} />
       ))}
