@@ -5,6 +5,10 @@
   grid-template-columns: repeat(24, 1fr);
 }
 
+.listSmall {
+  grid-template-columns: repeat(5, 1fr) !important;
+}
+
 .listItem {
   list-style: none;
   button {

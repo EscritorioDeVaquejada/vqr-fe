@@ -8,4 +8,5 @@ export type InputProps = {
   name: string;
   value?: string;
   onChange?: any;
+  hint?: string;
 };

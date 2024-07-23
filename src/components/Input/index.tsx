@@ -13,6 +13,7 @@ const Input: FC<InputProps> = ({
   placeholder,
   name,
   onChange,
+  hint,
 }) => {
   const [localType, setLocalType] = useState(type);
 
@@ -36,23 +37,26 @@ const Input: FC<InputProps> = ({
           {label}
         </label>
       )}
-      <div className={styles.inputHide}>
-        <input
-          type={localType}
-          id={id}
-          className={styles.input}
-          placeholder={placeholder}
-          onChange={handleOnChange}
-        />
-        {type === "password" && (
-          <button
-            className={styles.hide}
-            type="button"
-            onClick={togglePasswordVisibility}
-          >
-            <img src={Hide.src} />
-          </button>
-        )}
+      <div className={styles.inputHintContainer}>
+        <div className={styles.inputHide}>
+          <input
+            type={localType}
+            id={id}
+            className={styles.input}
+            placeholder={placeholder}
+            onChange={handleOnChange}
+          />
+          {type === "password" && (
+            <button
+              className={styles.hide}
+              type="button"
+              onClick={togglePasswordVisibility}
+            >
+              <img src={Hide.src} />
+            </button>
+          )}
+        </div>
+        {hint && <p className={styles.hint}>{hint}</p>}
       </div>
     </div>
   );
