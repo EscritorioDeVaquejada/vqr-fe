@@ -1,0 +1,23 @@
+.container {
+  border-radius: 0.6rem;
+  border: 1px solid #dadbdd;
+  width: fit-content;
+  height: fit-content;
+  overflow: hidden;
+  button {
+    background-color: #fff;
+    border: none;
+    display: flex;
+    gap: 1rem;
+    font-size: 1.2rem;
+    padding: 1rem;
+    width: 15rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    &:focus {
+      outline: none;
+    }
+  }
+}

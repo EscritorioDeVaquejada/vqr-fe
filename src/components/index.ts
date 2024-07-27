@@ -9,3 +9,4 @@ export { default as Menu } from "./Menu";
 export { default as Tickets } from "./Tickets";
 export { default as Multi } from "./Multi";
 export { default as Checkbox } from "./Checkbox";
+export { default as Select } from "./Select";

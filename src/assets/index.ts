@@ -21,3 +21,4 @@ export { default as HometGrey } from "./home-grey.svg";
 export { default as HometWhite } from "./home-white.svg";
 export { default as CloseGrey } from "./close-grey.svg";
 export { default as CloseWhite } from "./close-white.svg";
+export { default as ArrowDown } from "./arrow-down.svg";
