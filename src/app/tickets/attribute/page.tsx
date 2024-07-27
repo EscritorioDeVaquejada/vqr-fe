@@ -1,13 +1,86 @@
 "use client";
 
-import React from "react";
+import React, { FC } from "react";
 
 import styles from "./page.module.scss";
 import { Button, Checkbox, Input, Multi, Tickets } from "@/components";
 import { useTicketAttributeStore } from "@/store";
+import { ArrowLeft } from "@/assets";
+import { CompletedFormProps } from "./types";
+
+const CompletedForm: FC<CompletedFormProps> = ({ toggleIsCompleted }) => {
+  return (
+    <div className={styles.completedFormContainer}>
+      <Button
+        type="button"
+        color="secondary"
+        icon={ArrowLeft.src}
+        iconPosition="left"
+        isFullWidth={false}
+        width="fit-content"
+        onClick={toggleIsCompleted}
+      />
+      <div className={styles.ticketHeadingTicketCountContainer}>
+        <h1 className={styles.ticketHeading}>Senha</h1>
+        <span className={styles.ticketCount}>32</span>
+      </div>
+      <div className={styles.gridContainer}>
+        <div className={styles.sectionAside}>
+          <section className={styles.section}>
+            <span>Puxador</span>
+            <p>FRANCISCO ANTONIO SILVA</p>
+          </section>
+          <section className={styles.section}>
+            <span>Esteira</span>
+            <p>RAIMUNDO PEREIRA FRANÇA</p>
+          </section>
+          <section className={styles.section}>
+            <span>Municipio</span>
+            <p>IMPUEIRAS</p>
+          </section>
+          <section className={styles.section}>
+            <span>Representação</span>
+            <p>PARQUE DE VAQUEJADA IMPUEIRAS CLUB</p>
+          </section>
+          <section className={styles.section}>
+            <span>Forma de Pagamento</span>
+            <p>Pix, Cartão</p>
+          </section>
+          <section className={styles.section}>
+            <span>Valor</span>
+            <p>R$ 60,00</p>
+          </section>
+        </div>
+        <div className={styles.sectionAside}>
+          <section className={styles.section}>
+            <span>Puxador</span>
+            <p>FRANCISCO ANTONIO SILVA</p>
+          </section>
+          <section className={styles.section}>
+            <span>Puxador</span>
+            <p>FRANCISCO ANTONIO SILVA</p>
+          </section>
+          <section className={styles.section}>
+            <span>Puxador</span>
+            <p>FRANCISCO ANTONIO SILVA</p>
+          </section>
+        </div>
+      </div>
+      <Multi>
+        <Button type="button" label="Cancelar" color="tertiary" />
+        <Button type="button" label="Confirmar" />
+      </Multi>
+    </div>
+  );
+};
 
 const page = () => {
-  const { toggleBoiTV, ticket } = useTicketAttributeStore();
+  const { toggleBoiTV, toggleIsCompleted, ticket, isCompleted } =
+    useTicketAttributeStore();
+
+  if (isCompleted) {
+    return <CompletedForm toggleIsCompleted={toggleIsCompleted} />;
+  }
 
   return (
     <div className={styles.container}>
@@ -30,7 +103,7 @@ const page = () => {
             name="municipality"
             placeholder="Informe o Municipio"
           />
-          <Input label="Cavalo" name="horse2" placeholder="Cavalo da Esteira" />
+          <Input label="Estado" name="state" placeholder="Selecione" />
         </div>
         <div className={styles.rowTree}>
           <Input
@@ -54,7 +127,7 @@ const page = () => {
           placeholder="Selecione"
         />
         <Input label="Valor" name="amount" placeholder="R$ 0,00" />
-        <Button type="submit" label="Avançar" />
+        <Button type="submit" label="Avançar" onClick={toggleIsCompleted} />
       </form>
       <div className={styles.sideListContainer}>
         <h1>Senha</h1>
