@@ -1,0 +1,95 @@
+.list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  padding: 0 7rem;
+}
+
+.cell {
+  display: grid;
+  grid-template-columns: 6.5rem 1fr;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.ticketNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 6.5rem;
+  height: 6.5rem;
+  background-color: #f27d33;
+  font-size: 2rem;
+  color: #fff;
+  border: 1px solid #f27d33;
+  border-right: none;
+}
+
+.ticketContent {
+  display: grid;
+  grid-template-columns: 1fr 4rem;
+  gap: 0.3rem;
+  justify-content: center;
+  border: 1px solid #c0c1c5;
+  border-left: none;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  overflow: hidden;
+}
+
+.names {
+  padding: 1rem;
+}
+
+.name {
+  color: #000;
+}
+
+.menu {
+  padding: 0.5rem 0;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  button {
+    outline: 5px solid #fff;
+    background-color: #f27d33;
+    height: 2.3rem;
+    width: 2.3rem;
+    border-radius: 10rem;
+    border: none;
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    cursor: pointer;
+    &:focus {
+      outline: 5px solid #fff;
+    }
+    span {
+      background-color: #fff;
+      height: 0.3rem;
+      width: 0.3rem;
+      border-radius: 10rem;
+    }
+  }
+  .line {
+    position: absolute;
+    height: 80%;
+    width: 3px;
+    background-color: #dadbdd;
+    z-index: 1;
+    left: 50%;
+  }
+}
+
+.freeTicketNumber {
+  background-color: #a7a8ad !important;
+  border-color: #c0c1c5;
+}
+
+.namesFree {
+  display: flex;
+  align-items: center;
+}
