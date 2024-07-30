@@ -106,6 +106,7 @@ const Menu = () => {
           icon={CloseWhite.src}
           iconPosition="left"
           width="100%"
+          href="/end-event"
         />
       </div>
     </nav>
