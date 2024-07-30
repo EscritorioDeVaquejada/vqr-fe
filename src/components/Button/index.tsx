@@ -10,6 +10,7 @@ const Wrapper: FC<WrapperProps> = ({
   color = "primary",
   isFullWidth = true,
   width,
+  height,
   href,
   isDisabled,
   children,
@@ -30,6 +31,7 @@ const Wrapper: FC<WrapperProps> = ({
           className={`${styles.button} ${primary} ${secondary} ${tertiary} ${alert} ${fullWidth} ${disabled}`}
           style={{
             ...(width && { width }),
+            ...(height && { height }),
           }}
           href={isDisabled ? "#" : href}
         >

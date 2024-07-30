@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { MouseEvent, ReactNode } from "react";
 
 export type ButtonProps = {
   type: "button" | "submit";
@@ -9,8 +9,9 @@ export type ButtonProps = {
   iconPosition?: "left" | "right";
   isFullWidth?: boolean;
   width?: string;
+  height?: string;
   href?: string;
-  onClick?: () => void;
+  onClick?: (event: MouseEvent<HTMLButtonElement>) => void | (() => void);
 };
 
 export type WrapperProps = ButtonProps & {
