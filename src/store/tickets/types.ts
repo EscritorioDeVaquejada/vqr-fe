@@ -1,13 +1,10 @@
 export type Ticket = {
-  id: string;
-  isSelected: boolean;
-  isFree: boolean;
-  p: string;
-  e: string;
-  r: string;
+  boiTV: boolean;
 };
 
-export type TicketsStore = {
-  tickets: Ticket[];
-  getTickets: () => Promise<void>;
+export type TicketAttributeStore = {
+  ticket: Ticket | null;
+  isCompleted: boolean;
+  toggleBoiTV: () => void;
+  toggleIsCompleted: () => void;
 };

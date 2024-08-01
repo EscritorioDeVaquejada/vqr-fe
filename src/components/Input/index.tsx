@@ -15,6 +15,7 @@ const Input: FC<InputProps> = ({
   name,
   onChange,
   hint,
+  errorMessage,
 }) => {
   const [localType, setLocalType] = useState(type);
 
@@ -58,6 +59,7 @@ const Input: FC<InputProps> = ({
           )}
         </div>
         {hint && <p className={styles.hint}>{hint}</p>}
+        {errorMessage && <p className={styles.errorMessage}>{errorMessage}</p>}
       </div>
     </div>
   );

@@ -1,1 +1,1 @@
-export { default as useLogin } from './useLogin';
+export { default as useOutsideClick } from './useOutsideClick';

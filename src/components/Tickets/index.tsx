@@ -2,7 +2,7 @@
 
 import React, { FC, useEffect } from 'react';
 
-import useTicketsStore from '@/store/tickets';
+import useTicketsStore from '@/store/ticketsAttribute';
 
 import styles from './index.module.scss';
 import { CellProps, TicketsProps } from './types';

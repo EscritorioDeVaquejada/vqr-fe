@@ -1,18 +1,20 @@
 import { create } from 'zustand';
 
-import { VQR_BACKEND } from '@/constants';
-import { fetch } from '@/services';
+import { TicketAttributeStore } from './types';
 
-import ticketsData from './data';
-import { TicketsStore } from './types';
+const useTicketsAttributeStore = create<TicketAttributeStore>((set, get) => ({
+  ticket: null,
+  isCompleted: false,
+  toggleBoiTV: () => {
+    const boiTV = get().ticket?.boiTV;
 
-const useTicketsStore = create<TicketsStore>((set, get) => ({
-  tickets: [],
-  getTickets: async () => {
-    const response = await fetch.post(VQR_BACKEND, {});
+    set(() => ({ ticket: { boiTV: !boiTV } }));
+  },
+  toggleIsCompleted: () => {
+    const isCompleted = get().isCompleted;
 
-    set(() => ({ tickets: ticketsData, filteredTickets: ticketsData }));
+    set(() => ({ isCompleted: !isCompleted }));
   },
 }));
 
-export default useTicketsStore;
+export default useTicketsAttributeStore;

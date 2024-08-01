@@ -1,0 +1,11 @@
+.errorList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.message {
+  color: #e93e3e;
+  list-style: none;
+  font-size: 1rem;
+}

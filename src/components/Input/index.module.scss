@@ -8,6 +8,7 @@
 .label {
   font-size: 1.2rem;
   width: 100%;
+  text-wrap: nowrap;
 }
 
 .input {
@@ -55,4 +56,9 @@
 .hint {
   font-size: 0.9rem;
   color: #83929e;
+}
+
+.errorMessage {
+  font-size: 0.9rem;
+  color: #e93e3e;
 }

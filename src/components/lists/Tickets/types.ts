@@ -1,4 +1,4 @@
-import { Ticket } from '@/store/tickets/types';
+import { Ticket } from '@/store/ticketsAttribute/types';
 
 export type CellProps = {
   ticket: Ticket;

@@ -2,14 +2,14 @@
 
 import React from 'react';
 
-import { Brand, Button, Input } from '@/components';
-import { useLogin } from '@/hooks';
+import { Brand, Button, ErrorMessages, Input } from '@/components';
 
 import styles from './page.module.scss';
+import { useUserStore } from '@/store';
 
 const page = () => {
-  const { handlePassword, handleUsername, submitLogin, password, username } =
-    useLogin();
+  const { fields, errors, handleUsername, handlePassword, submitLogin } =
+    useUserStore();
 
   return (
     <div className={styles.container}>
@@ -27,8 +27,9 @@ const page = () => {
             name="name"
             label="Nome"
             placeholder="Informe seu name"
-            onChange={(value: string) => handleUsername(value)}
-            value={username.value}
+            onChange={(value: { name: string }) => handleUsername(value)}
+            value={fields.username.value}
+            errorMessage={fields.username.invalidText}
           />
           <Input
             id="password"
@@ -36,10 +37,12 @@ const page = () => {
             label="Senha"
             placeholder="Informe sua senha"
             type="password"
-            onChange={(value: string) => handlePassword(value)}
-            value={password.value}
+            onChange={(value: { password: string }) => handlePassword(value)}
+            value={fields.password.value}
+            errorMessage={fields.password.invalidText}
           />
           <Button type="submit" label="Acessar Minha Conta" color="primary" />
+          <ErrorMessages messages={errors} />
         </form>
       </div>
     </div>

@@ -11,3 +11,4 @@ export { default as Multi } from './Multi';
 export { default as Checkbox } from './Checkbox';
 export { default as Select } from './Select';
 export * from './modals';
+export { default as ErrorMessages } from './ErrorMessages';
