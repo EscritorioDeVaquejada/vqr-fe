@@ -1,12 +1,12 @@
-import { MouseEvent, ReactNode } from "react";
+import { MouseEvent, ReactNode } from 'react';
 
 export type ButtonProps = {
-  type: "button" | "submit";
+  type: 'button' | 'submit';
   label?: string;
-  color?: "primary" | "secondary" | "tertiary" | "alert";
+  color?: 'primary' | 'secondary' | 'tertiary' | 'alert';
   isDisabled?: boolean;
   icon?: string;
-  iconPosition?: "left" | "right";
+  iconPosition?: 'left' | 'right';
   isFullWidth?: boolean;
   width?: string;
   height?: string;

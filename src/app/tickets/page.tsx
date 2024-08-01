@@ -1,8 +1,9 @@
-import { Button, Search, Select, TicketsList } from "@/components";
-import React from "react";
+import React from 'react';
 
-import styles from "./page.module.scss";
-import { ArrowLeft } from "@/assets";
+import { ArrowLeft } from '@/assets';
+import { Button, Search, Select, TicketsList } from '@/components';
+
+import styles from './page.module.scss';
 
 const page = () => {
   return (

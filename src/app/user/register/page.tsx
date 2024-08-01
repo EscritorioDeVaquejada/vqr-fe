@@ -1,9 +1,10 @@
-"use client";
+'use client';
 
-import React, { MouseEvent, useState } from "react";
+import React, { MouseEvent, useState } from 'react';
 
-import styles from "./page.module.scss";
-import { Button, Input, IrreversibleModal } from "@/components";
+import { Button, Input, IrreversibleModal } from '@/components';
+
+import styles from './page.module.scss';
 
 const page = () => {
   const [canSubmit, setCanSubmit] = useState(true);
@@ -22,7 +23,7 @@ const page = () => {
   };
 
   const confirmResetPasswords = () => {
-    console.log("Reseting passwords...");
+    console.log('Reseting passwords...');
   };
 
   return (
@@ -31,7 +32,7 @@ const page = () => {
         <IrreversibleModal
           headerStatement="Resetar todas as senhas"
           mainStatement={[
-            "Esta é uma ação irreversível, tem certeza que deseja confirmar essa ação?",
+            'Esta é uma ação irreversível, tem certeza que deseja confirmar essa ação?',
           ]}
           onCancel={toggleIsEndEventModal}
           onConfirm={confirmResetPasswords}

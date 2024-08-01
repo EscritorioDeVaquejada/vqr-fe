@@ -1,10 +1,10 @@
-import { create } from "zustand";
+import { create } from 'zustand';
 
-import { fetch } from "@/services";
-import { VQR_BACKEND } from "@/constants";
+import { VQR_BACKEND } from '@/constants';
+import { fetch } from '@/services';
 
-import { TicketsStore } from "./types";
-import ticketsData from "./data";
+import ticketsData from './data';
+import { TicketsStore } from './types';
 
 const useTicketsStore = create<TicketsStore>((set, get) => ({
   tickets: [],

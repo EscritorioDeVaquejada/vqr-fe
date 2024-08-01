@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import React, { FC, useEffect, useState } from "react";
-import Link from "next/link";
+import Link from 'next/link';
+import React, { FC, useEffect, useState } from 'react';
 
-import { CardProps, EventsListProps, MenuProps } from "./types";
-import styles from "./index.module.scss";
+import { useEventsStore } from '@/store';
 
-import { useEventsStore } from "@/store";
+import styles from './index.module.scss';
+import { CardProps, EventsListProps, MenuProps } from './types';
 
 const Menu: FC<MenuProps> = ({ event }) => {
   // const { selectClient } = useEventsStore();

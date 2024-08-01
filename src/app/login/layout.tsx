@@ -1,7 +1,7 @@
-import React, { FC } from "react";
+import React, { FC } from 'react';
 
-import styles from "./layout.module.scss";
-import { LayoutProps } from "./type";
+import styles from './layout.module.scss';
+import { LayoutProps } from './type';
 
 const layout: FC<LayoutProps> = ({ children }) => {
   return (

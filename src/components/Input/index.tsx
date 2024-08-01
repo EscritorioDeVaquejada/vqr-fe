@@ -1,13 +1,14 @@
-"use client";
+'use client';
 
-import React, { ChangeEvent, FC, useState } from "react";
+import React, { ChangeEvent, FC, useState } from 'react';
 
-import styles from "./index.module.scss";
-import { InputProps } from "./types";
-import { Hide } from "@/assets";
+import { Hide } from '@/assets';
+
+import styles from './index.module.scss';
+import { InputProps } from './types';
 
 const Input: FC<InputProps> = ({
-  type = "text",
+  type = 'text',
   label,
   id,
   placeholder,
@@ -18,7 +19,7 @@ const Input: FC<InputProps> = ({
   const [localType, setLocalType] = useState(type);
 
   const togglePasswordVisibility = () => {
-    setLocalType((prev) => (prev === "password" ? "text" : "password"));
+    setLocalType((prev) => (prev === 'password' ? 'text' : 'password'));
   };
 
   const handleOnChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -46,7 +47,7 @@ const Input: FC<InputProps> = ({
             placeholder={placeholder}
             onChange={handleOnChange}
           />
-          {type === "password" && (
+          {type === 'password' && (
             <button
               className={styles.hide}
               type="button"

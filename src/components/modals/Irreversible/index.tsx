@@ -1,12 +1,13 @@
-import React, { FC } from "react";
-import Image from "next/image";
+import Image from 'next/image';
+import React, { FC } from 'react';
 
-import styles from "./index.module.scss";
-import { BlockRed, CloseDarkBlue } from "@/assets";
-import { IrreversibleProps } from "./types";
-import Button from "@/components/Button";
+import { BlockRed, CloseDarkBlue } from '@/assets';
+import Button from '@/components/Button';
 
-const Confirm: FC<IrreversibleProps> = ({
+import styles from './index.module.scss';
+import { IrreversibleProps } from './types';
+
+const Irreversible: FC<IrreversibleProps> = ({
   headerStatement,
   mainStatement,
   onCancel,
@@ -32,7 +33,7 @@ const Confirm: FC<IrreversibleProps> = ({
       </main>
       <footer className={styles.footer}>
         <Button
-          label="Cancel"
+          label="Cancelar"
           color="tertiary"
           type="button"
           onClick={onCancel}
@@ -48,4 +49,4 @@ const Confirm: FC<IrreversibleProps> = ({
   );
 };
 
-export default Confirm;
+export default Irreversible;

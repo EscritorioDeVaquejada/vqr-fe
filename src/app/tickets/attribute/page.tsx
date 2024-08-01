@@ -1,12 +1,13 @@
-"use client";
+'use client';
 
-import React, { FC } from "react";
+import React, { FC } from 'react';
 
-import styles from "./page.module.scss";
-import { Button, Checkbox, Input, Multi, Tickets } from "@/components";
-import { useTicketAttributeStore } from "@/store";
-import { ArrowLeft } from "@/assets";
-import { CompletedFormProps } from "./types";
+import { ArrowLeft } from '@/assets';
+import { Button, Checkbox, Input, Multi, Tickets } from '@/components';
+import { useTicketAttributeStore } from '@/store';
+
+import styles from './page.module.scss';
+import { CompletedFormProps } from './types';
 
 const CompletedForm: FC<CompletedFormProps> = ({ toggleIsCompleted }) => {
   return (

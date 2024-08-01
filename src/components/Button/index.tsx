@@ -1,13 +1,13 @@
-import React, { FC } from "react";
-import Link from "next/link";
-import { ButtonProps, WrapperProps } from "./types";
+import Image from 'next/image';
+import Link from 'next/link';
+import React, { FC } from 'react';
 
-import styles from "./index.module.scss";
-import Image from "next/image";
+import styles from './index.module.scss';
+import { ButtonProps, WrapperProps } from './types';
 
 const Wrapper: FC<WrapperProps> = ({
   type,
-  color = "primary",
+  color = 'primary',
   isFullWidth = true,
   width,
   height,
@@ -16,12 +16,12 @@ const Wrapper: FC<WrapperProps> = ({
   children,
   onClick,
 }) => {
-  const primary = color === "primary" ? styles.primary : "";
-  const secondary = color === "secondary" ? styles.secondary : "";
-  const tertiary = color === "tertiary" ? styles.tertiary : "";
-  const alert = color === "alert" ? styles.alert : "";
-  const fullWidth = !isFullWidth ? styles.fitContent : "";
-  const disabled = isDisabled ? styles.disabled : "";
+  const primary = color === 'primary' ? styles.primary : '';
+  const secondary = color === 'secondary' ? styles.secondary : '';
+  const tertiary = color === 'tertiary' ? styles.tertiary : '';
+  const alert = color === 'alert' ? styles.alert : '';
+  const fullWidth = !isFullWidth ? styles.fitContent : '';
+  const disabled = isDisabled ? styles.disabled : '';
 
   return (
     <>
@@ -33,7 +33,7 @@ const Wrapper: FC<WrapperProps> = ({
             ...(width && { width }),
             ...(height && { height }),
           }}
-          href={isDisabled ? "#" : href}
+          href={isDisabled ? '#' : href}
         >
           {children}
         </Link>
@@ -56,7 +56,7 @@ const Wrapper: FC<WrapperProps> = ({
 
 const Button: FC<ButtonProps> = ({ label, icon, iconPosition, ...rest }) => (
   <Wrapper icon={icon} iconPosition={iconPosition} label={label} {...rest}>
-    {iconPosition === "left" && icon && (
+    {iconPosition === 'left' && icon && (
       <Image
         src={icon}
         width={24}
@@ -66,7 +66,7 @@ const Button: FC<ButtonProps> = ({ label, icon, iconPosition, ...rest }) => (
       />
     )}
     {label && <span className={styles.label}>{label}</span>}
-    {iconPosition === "right" && icon && (
+    {iconPosition === 'right' && icon && (
       <Image
         src={icon}
         width={24}

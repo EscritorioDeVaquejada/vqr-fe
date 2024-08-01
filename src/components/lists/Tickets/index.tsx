@@ -1,10 +1,11 @@
-"use client";
+'use client';
 
-import React, { FC, useEffect } from "react";
+import React, { FC, useEffect } from 'react';
 
-import styles from "./index.module.scss";
-import { CellProps } from "./types";
-import { useTicketsStore } from "@/store";
+import { useTicketsStore } from '@/store';
+
+import styles from './index.module.scss';
+import { CellProps } from './types';
 
 const Cell: FC<CellProps> = ({ ticket, index }) => {
   console.log({ ticket });
@@ -12,17 +13,17 @@ const Cell: FC<CellProps> = ({ ticket, index }) => {
     <div className={styles.cell}>
       <span
         className={`${styles.ticketNumber} ${
-          ticket.isFree ? styles.freeTicketNumber : ""
+          ticket.isFree ? styles.freeTicketNumber : ''
         }`}
       >
         {index + 1}
       </span>
       <div className={styles.ticketContent}>
         <div
-          className={`${styles.names} ${ticket.isFree ? styles.namesFree : ""}`}
+          className={`${styles.names} ${ticket.isFree ? styles.namesFree : ''}`}
         >
           {ticket.isFree ? (
-            "SENHA LIVRE"
+            'SENHA LIVRE'
           ) : (
             <>
               <p className={styles.name}>{ticket.p}</p>

@@ -1,9 +1,9 @@
-import { create } from "zustand";
+import { create } from 'zustand';
 
-import { fetch } from "@/services";
-import { VQR_BACKEND } from "@/constants";
+import { VQR_BACKEND } from '@/constants';
+import { fetch } from '@/services';
 
-import { LogInUserParams, UserState, UserStore } from "./types";
+import { LogInUserParams, UserState, UserStore } from './types';
 
 const useUserStore = create<UserStore>((set) => ({
   isLoggedIn: false,

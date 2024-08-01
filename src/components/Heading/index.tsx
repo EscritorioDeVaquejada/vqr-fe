@@ -1,9 +1,9 @@
-import React, { FC } from "react";
+import React, { FC } from 'react';
 
-import { Brand } from "@/components";
+import { Brand } from '@/components';
 
-import styles from "./index.module.scss";
-import { HeadingProps } from "./types";
+import styles from './index.module.scss';
+import { HeadingProps } from './types';
 
 const Heading: FC<HeadingProps> = ({ statement }) => {
   return (

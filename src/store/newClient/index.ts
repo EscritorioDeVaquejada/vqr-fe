@@ -1,10 +1,10 @@
-import { create } from "zustand";
+import { create } from 'zustand';
 
-import { fetch } from "@/services";
-import { VQR_BACKEND } from "@/constants";
+import { VQR_BACKEND } from '@/constants';
+import { fetch } from '@/services';
 
-import { Client, ClientsStore } from "./types";
-import clientsData from "./data";
+import clientsData from './data';
+import { Client, ClientsStore } from './types';
 
 const useNewClientStore = create<ClientsStore>((set, get) => ({
   clients: [],

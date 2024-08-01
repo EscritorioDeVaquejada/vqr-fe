@@ -1,11 +1,13 @@
-import React from "react";
+'use client';
 
-import { PlusCircle } from "@/assets";
-import { Button, EventsList, Search } from "@/components";
+import React from 'react';
 
-import events from "@/store/events/data";
-import styles from "./page.module.scss";
-import { PageProps } from "./types";
+import { PlusCircle } from '@/assets';
+import { Button, EventsList, Search } from '@/components';
+import events from '@/store/events/data';
+
+import styles from './page.module.scss';
+import { PageProps } from './types';
 
 const page = ({ params }: PageProps) => {
   return (

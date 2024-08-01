@@ -4,17 +4,17 @@ import {
   Pix,
   TicketBlack,
   TicketStarBlack,
-} from "@/assets";
+} from '@/assets';
 
 export const ticketsSold = [
   {
-    name: "Senhas Comuns",
+    name: 'Senhas Comuns',
     quantity: 150,
     amount: 30000,
     icon: TicketBlack.src,
   },
   {
-    name: "Senhas com Bonificação",
+    name: 'Senhas com Bonificação',
     quantity: 50,
     amount: 7500,
     icon: TicketStarBlack.src,
@@ -23,19 +23,19 @@ export const ticketsSold = [
 
 export const soldWithBonus = [
   {
-    name: "Pix",
+    name: 'Pix',
     quantity: 60,
     amount: 75000,
     icon: Pix.src,
   },
   {
-    name: "Cartão",
+    name: 'Cartão',
     quantity: 36,
     amount: 4500,
     icon: CardBlack.src,
   },
   {
-    name: "Dinheiro",
+    name: 'Dinheiro',
     quantity: 56,
     amount: 6500,
     icon: CashBlack.src,

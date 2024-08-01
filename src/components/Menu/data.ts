@@ -1,56 +1,56 @@
-import { MenuItem } from "./types";
-
 import {
   CogGrey,
   CogWhite,
   FinanceGrey,
   FinanceWhite,
+  HometGrey,
+  HometWhite,
   ListGrey,
   ListWhite,
   NewUserGrey,
   NewUserWhite,
   TicketGrey,
   TicketWhite,
-  HometGrey,
-  HometWhite,
-} from "@/assets";
+} from '@/assets';
+
+import { MenuItem } from './types';
 
 const MenuItems: MenuItem[] = [
   {
-    href: "/",
+    href: '/',
     icon: HometGrey.src,
     iconSelected: HometWhite.src,
-    label: "Tela Inicial",
+    label: 'Tela Inicial',
   },
   {
-    href: "/tickets/manage",
+    href: '/tickets/manage',
     icon: CogGrey.src,
     iconSelected: CogWhite.src,
-    label: "Gerenciar Senhas",
+    label: 'Gerenciar Senhas',
   },
   {
-    href: "/tickets/attribute",
+    href: '/tickets/attribute',
     icon: TicketGrey.src,
     iconSelected: TicketWhite,
-    label: "Atribuir Senha",
+    label: 'Atribuir Senha',
   },
   {
-    href: "/tickets",
+    href: '/tickets',
     icon: ListGrey.src,
     iconSelected: ListWhite.src,
-    label: "Lista de Senha",
+    label: 'Lista de Senha',
   },
   {
-    href: "/user/register",
+    href: '/user/register',
     icon: NewUserGrey.src,
     iconSelected: NewUserWhite.src,
-    label: "Cadastrar Usuario",
+    label: 'Cadastrar Usuario',
   },
   {
-    href: "/budget",
+    href: '/budget',
     icon: FinanceGrey.src,
     iconSelected: FinanceWhite.src,
-    label: "Financas",
+    label: 'Financas',
   },
 ];
 

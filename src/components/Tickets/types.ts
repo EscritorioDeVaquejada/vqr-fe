@@ -1,4 +1,4 @@
-import { Ticket } from "@/store/tickets/types";
+import { Ticket } from '@/store/tickets/types';
 
 export type CellProps = {
   ticket: Ticket;
@@ -6,5 +6,5 @@ export type CellProps = {
 };
 
 export type TicketsProps = {
-  size?: "small" | "large";
+  size?: 'small' | 'large';
 };

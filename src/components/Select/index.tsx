@@ -1,9 +1,10 @@
-import Image from "next/image";
-import React, { FC } from "react";
+import Image from 'next/image';
+import React, { FC } from 'react';
 
-import styles from "./index.module.scss";
-import { SelectProps } from "./types";
-import { ArrowDown } from "@/assets";
+import { ArrowDown } from '@/assets';
+
+import styles from './index.module.scss';
+import { SelectProps } from './types';
 
 const Select: FC<SelectProps> = ({ placeholder }) => {
   return (

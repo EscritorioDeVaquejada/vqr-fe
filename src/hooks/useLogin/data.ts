@@ -1,11 +1,11 @@
-import { Fields } from "./types";
+import { Fields } from './types';
 
 const fields: Fields = {
   username: {
-    value: "",
+    value: '',
   },
   password: {
-    value: "",
+    value: '',
   },
 };
 
