@@ -1,4 +1,4 @@
-import { Event } from "@/store/events/types";
+import { Event } from '@/store/events/types';
 
 export type CardProps = {
   event: Event;

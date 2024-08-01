@@ -1,9 +1,10 @@
-"use client";
+'use client';
 
-import React, { MouseEvent, useState } from "react";
+import React, { MouseEvent, useState } from 'react';
 
-import styles from "./page.module.scss";
-import { Button, IrreversibleModal, Input } from "@/components";
+import { Button, Input, IrreversibleModal } from '@/components';
+
+import styles from './page.module.scss';
 
 const page = () => {
   const [canSubmit, setCanSubmit] = useState(true);
@@ -19,7 +20,7 @@ const page = () => {
   };
 
   const confirmEndEvent = () => {
-    console.log("Ending event...");
+    console.log('Ending event...');
   };
 
   return (
@@ -28,7 +29,7 @@ const page = () => {
         <IrreversibleModal
           headerStatement="Encerrar Evento"
           mainStatement={[
-            "Esta é uma ação irreversível, tem certeza que deseja confirmar essa ação?",
+            'Esta é uma ação irreversível, tem certeza que deseja confirmar essa ação?',
           ]}
           onCancel={toggleIsEndEventModal}
           onConfirm={confirmEndEvent}

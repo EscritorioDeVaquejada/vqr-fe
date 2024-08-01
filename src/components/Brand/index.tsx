@@ -1,31 +1,31 @@
-import React, { FC } from "react";
+import React, { FC } from 'react';
 
-import Logo from "@/assets/logo.jpg";
+import Logo from '@/assets/logo.jpg';
 
-import styles from "./index.module.scss";
-import { BrandProps } from "./types";
+import styles from './index.module.scss';
+import { BrandProps } from './types';
 
-const Brand: FC<BrandProps> = ({ size = "medium", borderPositon }) => {
-  const small = size === "small" ? styles.small : "";
-  const medium = size === "medium" ? styles.medium : "";
-  const large = size === "large" ? styles.large : "";
+const Brand: FC<BrandProps> = ({ size = 'medium', borderPositon }) => {
+  const small = size === 'small' ? styles.small : '';
+  const medium = size === 'medium' ? styles.medium : '';
+  const large = size === 'large' ? styles.large : '';
 
   const getBorderPosition = () => {
     switch (borderPositon) {
-      case "top": {
+      case 'top': {
         return styles.borderTop;
       }
-      case "left": {
+      case 'left': {
         return styles.borderLeft;
       }
-      case "bottom": {
+      case 'bottom': {
         return styles.borderBottom;
       }
-      case "right": {
+      case 'right': {
         return styles.borderRight;
       }
       case undefined: {
-        return "";
+        return '';
       }
     }
   };

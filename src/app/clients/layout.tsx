@@ -1,27 +1,28 @@
-"use client";
+'use client';
 
-import React, { FC } from "react";
-import { usePathname } from "next/navigation";
+import { usePathname } from 'next/navigation';
+import React, { FC } from 'react';
 
-import styles from "./layout.module.scss";
-import { LayoutProps } from "./types";
-import { Heading } from "@/components";
+import { Heading } from '@/components';
+
+import styles from './layout.module.scss';
+import { LayoutProps } from './types';
 
 const layout: FC<LayoutProps> = ({ children, ...props }) => {
   const pathname = usePathname();
-  const pathnameArray = pathname.split("/");
+  const pathnameArray = pathname.split('/');
   const currentPath = pathnameArray[pathnameArray.length - 1];
 
   const getHeadingStatement = () => {
     switch (currentPath) {
-      case "clients": {
-        return "Sistema de Gerenciamente de Vaquejadas";
+      case 'clients': {
+        return 'Sistema de Gerenciamente de Vaquejadas';
       }
-      case "create": {
-        return "Realize o Cadastro do Cliente para poder Gerenciar seus eventos.";
+      case 'create': {
+        return 'Realize o Cadastro do Cliente para poder Gerenciar seus eventos.';
       }
       default: {
-        return "Sistema de Gerenciamente de Vaquejadas";
+        return 'Sistema de Gerenciamente de Vaquejadas';
       }
     }
   };
@@ -32,7 +33,7 @@ const layout: FC<LayoutProps> = ({ children, ...props }) => {
     <div className={styles.container}>
       <aside className={styles.aside}>
         <Heading statement={getHeadingStatement()} />
-        {currentPath === "clients" && (
+        {currentPath === 'clients' && (
           <h3 className={styles.pageDisplay}>Clientes</h3>
         )}
       </aside>

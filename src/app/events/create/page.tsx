@@ -1,13 +1,11 @@
-"use client";
-import React from "react";
+'use client';
+import React from 'react';
 
-import { Button, Input } from "@/components";
-import { ArrowLeft } from "@/assets";
+import { ArrowLeft } from '@/assets';
+import { Button, Input, Multi } from '@/components';
+import { useNewClientStore } from '@/store';
 
-import styles from "./page.module.scss";
-
-import { useNewClientStore } from "@/store";
-import { Multi } from "@/components";
+import styles from './page.module.scss';
 
 const page = () => {
   const {} = useNewClientStore();

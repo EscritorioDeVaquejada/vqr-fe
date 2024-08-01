@@ -1,20 +1,21 @@
-"use client";
+'use client';
 
-import { Menu } from "@/components";
-import React, { FC } from "react";
+import { usePathname } from 'next/navigation';
+import React, { FC } from 'react';
 
-import styles from "./index.module.scss";
-import { RootLayoutProps } from "./types";
-import { usePathname } from "next/navigation";
+import { Menu } from '@/components';
+
+import styles from './index.module.scss';
+import { RootLayoutProps } from './types';
 
 const RootLayout: FC<RootLayoutProps> = ({ children }) => {
   const pathname = usePathname();
-  const currentPathArray = pathname.split("/");
+  const currentPathArray = pathname.split('/');
 
   if (
-    currentPathArray[1] === "clients" ||
-    currentPathArray[1] === "events" ||
-    currentPathArray[1] === "login"
+    currentPathArray[1] === 'clients' ||
+    currentPathArray[1] === 'events' ||
+    currentPathArray[1] === 'login'
   ) {
     return <>{children}</>;
   }

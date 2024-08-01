@@ -1,4 +1,4 @@
-import { AxiosRequestHeaders } from "axios";
+import { AxiosRequestHeaders } from 'axios';
 
 export type Headers = AxiosRequestHeaders | { [key: string]: any };
 

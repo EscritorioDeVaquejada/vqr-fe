@@ -1,4 +1,4 @@
-import { Client } from "@/store/clients/types";
+import { Client } from '@/store/clients/types';
 
 export type CardProps = {
   client: Client;

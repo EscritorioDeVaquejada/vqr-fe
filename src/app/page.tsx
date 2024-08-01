@@ -1,5 +1,6 @@
-import { Tickets } from "@/components";
-import styles from "./page.module.scss";
+import { Tickets } from '@/components';
+
+import styles from './page.module.scss';
 
 export default function Home() {
   return (

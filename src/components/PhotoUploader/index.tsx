@@ -1,7 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import styles from "./index.module.scss";
-import { PhotoPlus } from "@/assets";
+import { PhotoPlus } from '@/assets';
+
+import styles from './index.module.scss';
 
 const PhotoUploader = () => {
   return (

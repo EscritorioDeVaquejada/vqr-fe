@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
-import { Button, ClientsList, Search } from "@/components";
+import { PlusCircle } from '@/assets';
+import { Button, ClientsList, Search } from '@/components';
+import clients from '@/store/clients/data';
 
-import styles from "./page.module.scss";
-import clients from "@/store/clients/data";
-import { PlusCircle } from "@/assets";
+import styles from './page.module.scss';
 
 const page = () => {
   return (

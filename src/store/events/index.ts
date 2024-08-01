@@ -1,10 +1,10 @@
-import { create } from "zustand";
+import { create } from 'zustand';
 
-import { fetch } from "@/services";
-import { VQR_BACKEND } from "@/constants";
+import { VQR_BACKEND } from '@/constants';
+import { fetch } from '@/services';
 
-import { EventsStore } from "./types";
-import eventsData from "./data";
+import eventsData from './data';
+import { EventsStore } from './types';
 
 const useEventsStore = create<EventsStore>((set, get) => ({
   events: [],

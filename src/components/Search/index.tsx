@@ -1,10 +1,10 @@
-"use client";
-import React, { ChangeEvent } from "react";
+'use client';
+import React, { ChangeEvent } from 'react';
 
-import { useClientsStore } from "@/store";
-import { Search as SearchSVG } from "@/assets";
+import { Search as SearchSVG } from '@/assets';
+import { useClientsStore } from '@/store';
 
-import styles from "./index.module.scss";
+import styles from './index.module.scss';
 
 const Search = () => {
   const { filterClients } = useClientsStore();

@@ -9,7 +9,7 @@ export type Fields = {
   };
 };
 
-export type FieldKey = "username" | "password";
+export type FieldKey = 'username' | 'password';
 
 export type Username = {
   value: string;

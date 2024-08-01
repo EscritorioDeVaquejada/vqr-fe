@@ -1,17 +1,20 @@
-import { FormEvent, useState } from "react";
+import { FormEvent, useState } from 'react';
 
-import defaultFields from "./data";
+import { useUserStore } from '@/store';
 
-import { Fields, FieldKey, Username, Password } from "./types";
-import { LoginZod } from "./zod";
+import defaultFields from './data';
+import { FieldKey, Fields, Password, Username } from './types';
+import { LoginZod } from './zod';
 
 const useLogin = () => {
+  const {} = useUserStore();
+
   const [username, setUsername] = useState<Username>({
-    value: "",
+    value: '',
     invalidText: undefined,
   });
   const [password, setPassword] = useState<Password>({
-    value: "",
+    value: '',
     invalidText: undefined,
   });
 

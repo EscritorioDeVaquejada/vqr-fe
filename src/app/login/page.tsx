@@ -1,12 +1,11 @@
-"use client";
+'use client';
 
-import React from "react";
+import React from 'react';
 
-import { Input, Button, Brand } from "@/components";
+import { Brand, Button, Input } from '@/components';
+import { useLogin } from '@/hooks';
 
-import { useLogin } from "@/hooks";
-
-import styles from "./page.module.scss";
+import styles from './page.module.scss';
 
 const page = () => {
   const { handlePassword, handleUsername, submitLogin, password, username } =

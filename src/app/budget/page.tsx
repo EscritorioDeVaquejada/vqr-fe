@@ -1,11 +1,11 @@
-import React, { FC } from "react";
-import Image from "next/image";
+import Image from 'next/image';
+import React, { FC } from 'react';
 
-import { Currency } from "@/utils";
+import { Currency } from '@/utils';
 
-import styles from "./page.module.scss";
-import { soldWithBonus, ticketsSold } from "./data";
-import { PaymentMethodProps } from "./types";
+import { soldWithBonus, ticketsSold } from './data';
+import styles from './page.module.scss';
+import { PaymentMethodProps } from './types';
 
 const PaymentMethod: FC<PaymentMethodProps> = ({ ticket }) => {
   return (

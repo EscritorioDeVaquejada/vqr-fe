@@ -1,6 +1,6 @@
-import axios from "axios";
+import axios from 'axios';
 
-import { Body, Headers, Params } from "./types";
+import { Body, Headers, Params } from './types';
 
 class Fetch {
   async get(url: string, headers?: Headers) {

@@ -1,7 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import styles from "./page.module.scss";
-import { Button, Input, Tickets } from "@/components";
+import { Button, Input, Tickets } from '@/components';
+
+import styles from './page.module.scss';
 
 const page = () => {
   return (

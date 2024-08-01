@@ -1,1 +1,1 @@
-export { default as IrreversibleModal } from "./Irreversible";
+export { default as IrreversibleModal } from './Irreversible';

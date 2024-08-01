@@ -1,16 +1,17 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from 'next';
+import './globals.css';
 
-import { RootLayout as RootLayoutLayout } from "@/layouts";
+import { Inter } from 'next/font/google';
 
-import styles from "./layout.module.scss";
+import { RootLayout as RootLayoutLayout } from '@/layouts';
 
-const inter = Inter({ subsets: ["latin"] });
+import styles from './layout.module.scss';
+
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "VQR",
-  description: "VQR Description",
+  title: 'VQR',
+  description: 'VQR Description',
 };
 
 export default function RootLayout({

@@ -1,7 +1,7 @@
-import React, { FC } from "react";
+import React, { FC } from 'react';
 
-import styles from "./index.module.scss";
-import { MultiProps } from "./types";
+import styles from './index.module.scss';
+import { MultiProps } from './types';
 
 const Multi: FC<MultiProps> = ({ children }) => {
   const numberOfButtons = children.length;

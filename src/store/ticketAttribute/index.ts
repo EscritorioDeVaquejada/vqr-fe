@@ -1,10 +1,10 @@
-import { create } from "zustand";
+import { create } from 'zustand';
 
-import { TicketAttributeStore } from "./types";
+import { TicketAttributeStore } from './types';
 
 const useTicketsAttributeStore = create<TicketAttributeStore>((set, get) => ({
   ticket: null,
-  isCompleted: true,
+  isCompleted: false,
   toggleBoiTV: () => {
     const boiTV = get().ticket?.boiTV;
 
