@@ -1,20 +1,23 @@
 import { create } from 'zustand';
 
-import { TicketAttributeStore } from './types';
+import { TicketsStore } from './types';
+import ticketsData from './data';
 
-const useTicketsAttributeStore = create<TicketAttributeStore>((set, get) => ({
+const useTicketsStore = create<TicketsStore>((set, get) => ({
+  tickets: [],
   ticket: null,
-  isCompleted: false,
-  toggleBoiTV: () => {
-    const boiTV = get().ticket?.boiTV;
-
-    set(() => ({ ticket: { boiTV: !boiTV } }));
+  getTickets: async () => {
+    set((_state) => ({ tickets: ticketsData }));
   },
-  toggleIsCompleted: () => {
-    const isCompleted = get().isCompleted;
+  selectTicket: (id: string) => {
+    const tickets = get().tickets;
 
-    set(() => ({ isCompleted: !isCompleted }));
+    const filtered = tickets.filter((ticket) => {
+      return ticket.id.includes(id);
+    });
+
+    set((_state) => ({ ticket: filtered[0] }));
   },
 }));
 
-export default useTicketsAttributeStore;
+export default useTicketsStore;

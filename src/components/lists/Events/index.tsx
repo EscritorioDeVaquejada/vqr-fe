@@ -9,8 +9,6 @@ import styles from './index.module.scss';
 import { CardProps, EventsListProps, MenuProps } from './types';
 
 const Menu: FC<MenuProps> = ({ event }) => {
-  // const { selectClient } = useEventsStore();
-
   return (
     <div className={styles.menu}>
       <Link href={`/events/${event.id}`}>Evento</Link>

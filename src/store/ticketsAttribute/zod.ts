@@ -39,8 +39,7 @@ export const TicketsAtttributeZod = z.object({
   state: z.object({
     value: z
       .string({ required_error: 'Campo obrigatorio' })
-      .min(3, { message: 'Minimo de 3 caracteres' })
-      .max(100, { message: 'Maximo de 100 caracteres' }),
+      .min(2, { message: 'Campo obrigatorio' }),
     invalidText: z.string().optional(),
   }),
   representation: z.object({

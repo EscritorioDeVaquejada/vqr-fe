@@ -11,7 +11,7 @@ const useClientsStore = create<ClientsStore>((set, get) => ({
   filteredClients: [],
   client: null,
   getClients: async () => {
-    const response = await fetch.post(VQR_BACKEND, {});
+    // const response = await fetch.post(VQR_BACKEND, {});
 
     set(() => ({ clients: clientsData, filteredClients: clientsData }));
   },
@@ -33,7 +33,7 @@ const useClientsStore = create<ClientsStore>((set, get) => ({
     set((_state) => ({ client: filtered[0] }));
   },
   fetchClient: async (username: string) => {
-    const response = await fetch.post(VQR_BACKEND, {});
+    // const response = await fetch.post(VQR_BACKEND, {});
     const clients = clientsData;
 
     const filtered = clients.filter((client) =>

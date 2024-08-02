@@ -9,10 +9,12 @@ import {
   ErrorMessages,
   Input,
   Multi,
+  Select,
   Tickets,
 } from '@/components';
 import { useTicketAttributeStore } from '@/store';
 
+import { brazilState } from './data';
 import styles from './page.module.scss';
 import { CompletedFormProps } from './types';
 
@@ -154,12 +156,12 @@ const page = () => {
             value={fields.municipality.value}
             errorMessage={fields.municipality.invalidText}
           />
-          <Input
-            label="Estado"
+          <Select
+            placeholder="Estado"
             name="state"
-            placeholder="Selecione"
+            label="Estado"
+            items={brazilState}
             onChange={handleState}
-            value={fields.state.value}
             errorMessage={fields.state.invalidText}
           />
         </div>
