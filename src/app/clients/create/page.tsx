@@ -4,12 +4,17 @@ import React from 'react';
 import { ArrowLeft } from '@/assets';
 import { Button, Input, Multi } from '@/components';
 import PhotoUploader from '@/components/PhotoUploader';
+import { File, SelectedImage } from '@/components/PhotoUploader/types';
 import { useNewClientStore } from '@/store';
 
 import styles from './page.module.scss';
 
 const page = () => {
   const {} = useNewClientStore();
+
+  const handleUploadPhoto = (file: SelectedImage) => {
+    console.log({ newFile: file });
+  };
 
   return (
     <div className={styles.container}>
@@ -25,7 +30,7 @@ const page = () => {
       <h1 className={styles.heading}>Novo Cliente</h1>
       <div className={styles.labelPhotoContainer}>
         <span>Foto de Perfil</span>
-        <PhotoUploader />
+        <PhotoUploader onChange={handleUploadPhoto} />
       </div>
       <form className={styles.form}>
         <Input name="name" label="Nome" placeholder="Informe seu nome" />
