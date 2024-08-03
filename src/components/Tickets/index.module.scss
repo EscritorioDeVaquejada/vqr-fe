@@ -12,12 +12,19 @@
 .listItem {
   list-style: none;
   button {
+    cursor: pointer;
     width: 100%;
     aspect-ratio: 1/1;
     background-color: #fff;
     border: none;
     outline: 1px solid #262733;
     font-size: 1.5rem;
+    &:hover {
+      background-color: #f2f2f2;
+    }
+    &:active {
+      background-color: #e7e7e7;
+    }
   }
 }
 
@@ -25,6 +32,19 @@
   button {
     background-color: #f27d33;
     color: #fff;
+    cursor: default;
+    &:hover {
+      background-color: #f27d33;
+    }
+    &:active {
+      background-color: #f27d33;
+    }
+  }
+}
+
+.newListItemSelected {
+  button {
+    background-color: #262733;
   }
 }
 

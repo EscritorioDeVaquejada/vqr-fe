@@ -1,12 +1,12 @@
 'use client';
 
-import React, { ChangeEvent, FC } from 'react';
+import React, { ChangeEvent, FC, MouseEvent } from 'react';
 
 import styles from './index.module.scss';
 import { CheckboxProps } from './types';
 
 const Checkbox: FC<CheckboxProps> = ({ label, id, value, onChange }) => {
-  const toggleValue = (event: ChangeEvent<HTMLButtonElement>) => {
+  const toggleValue = (event: MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
     onChange();
   };
@@ -20,7 +20,7 @@ const Checkbox: FC<CheckboxProps> = ({ label, id, value, onChange }) => {
       )}
       <button
         className={`${styles.checkbox} ${value ? styles.selected : ''}`}
-        onChange={toggleValue}
+        onClick={toggleValue}
         id={id}
         type="button"
       />

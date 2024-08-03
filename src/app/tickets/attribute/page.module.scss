@@ -58,10 +58,8 @@
 }
 
 .quarterRow {
-  display: grid;
-  grid-template-columns: 75% 25%;
   gap: 1rem;
-  box-sizing: border-box;
+  display: flex;
 }
 
 .rowTree {

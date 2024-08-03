@@ -1,9 +1,17 @@
 .container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.selectContainer {
   border-radius: 0.6rem;
   border: 1px solid #dadbdd;
   width: fit-content;
   height: fit-content;
   overflow: hidden;
+  width: 100%;
   button {
     background-color: #fff;
     border: none;
@@ -11,7 +19,7 @@
     gap: 1rem;
     font-size: 1.2rem;
     padding: 1rem;
-    width: 15rem;
+    width: 100%;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
@@ -20,4 +28,65 @@
       outline: none;
     }
   }
+}
+
+.label {
+  font-size: 1.2rem;
+  width: 100%;
+  text-wrap: nowrap;
+}
+
+.noLabelList {
+  top: 4rem !important;
+}
+
+.list {
+  position: absolute;
+  top: 6rem;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #dadbdd;
+  z-index: 2;
+  border-radius: 0.6rem;
+  width: 10rem;
+  max-height: 20rem;
+  overflow-y: scroll;
+  li {
+    list-style: none;
+    button {
+      background-color: transparent;
+      border: none;
+      padding: 0.6rem 0.8rem;
+      font-size: 1rem;
+      text-align: left;
+      cursor: pointer;
+      width: 100%;
+      &:hover {
+        background-color: #f2f2f2;
+      }
+      &:active {
+        background-color: #e7e7e7;
+      }
+    }
+  }
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #7ab3f58c;
+  }
+}
+
+.selectedItem {
+  font-size: 1.2rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.errorMessage {
+  font-size: 0.9rem;
+  color: #e93e3e;
 }

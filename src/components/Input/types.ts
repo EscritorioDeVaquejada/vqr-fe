@@ -9,4 +9,5 @@ export type InputProps = {
   value?: string;
   onChange?: any;
   hint?: string;
+  errorMessage?: string;
 };

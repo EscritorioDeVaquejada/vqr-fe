@@ -1,6 +1,6 @@
 export type Ticket = {
-  id: string;
   isSelected: boolean;
+  id: string;
   isFree: boolean;
   p: string;
   e: string;
@@ -9,5 +9,7 @@ export type Ticket = {
 
 export type TicketsStore = {
   tickets: Ticket[];
+  ticket: Ticket | null;
   getTickets: () => Promise<void>;
+  selectTicket: (id: string) => void;
 };

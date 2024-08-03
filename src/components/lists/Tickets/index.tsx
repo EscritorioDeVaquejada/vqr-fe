@@ -8,7 +8,6 @@ import styles from './index.module.scss';
 import { CellProps } from './types';
 
 const Cell: FC<CellProps> = ({ ticket, index }) => {
-  console.log({ ticket });
   return (
     <div className={styles.cell}>
       <span

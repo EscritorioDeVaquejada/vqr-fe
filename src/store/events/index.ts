@@ -11,7 +11,7 @@ const useEventsStore = create<EventsStore>((set, get) => ({
   filteredEvents: [],
   event: null,
   getEvents: async () => {
-    const response = await fetch.post(VQR_BACKEND, {});
+    // const response = await fetch.post(VQR_BACKEND, {});
 
     set(() => ({ events: eventsData, filteredEvents: eventsData }));
   },
@@ -33,7 +33,7 @@ const useEventsStore = create<EventsStore>((set, get) => ({
     set((_state) => ({ event: filtered[0] }));
   },
   fetchEvent: async (username: string) => {
-    const response = await fetch.post(VQR_BACKEND, {});
+    // const response = await fetch.post(VQR_BACKEND, {});
     const events = eventsData;
 
     const filtered = events.filter((event) =>

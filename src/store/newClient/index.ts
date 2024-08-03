@@ -10,7 +10,7 @@ const useNewClientStore = create<ClientsStore>((set, get) => ({
   clients: [],
   filteredClients: [],
   getClients: async () => {
-    const response = await fetch.post(VQR_BACKEND, {});
+    // const response = await fetch.post(VQR_BACKEND, {});
 
     set(() => ({ clients: clientsData, filteredClients: clientsData }));
   },

@@ -1,8 +1,44 @@
-import { Ticket } from './types';
+import { Fields, Ticket } from './types';
+
+export const fieldsData: Fields = {
+  puller: {
+    value: '',
+  },
+  pullerHorse: {
+    value: '',
+  },
+  belt: {
+    value: '',
+  },
+  beltHorse: {
+    value: '',
+  },
+  municipality: {
+    value: '',
+  },
+  state: {
+    value: '',
+  },
+  representation: {
+    value: '',
+  },
+  ticketNumber: {
+    value: '',
+  },
+  boiTv: {
+    value: false,
+  },
+  paymentMethod: {
+    value: '',
+  },
+  amount: {
+    value: '',
+  },
+};
 
 const tickets: Ticket[] = [
   {
-    id: 'sdfd',
+    id: 'sd',
     isSelected: true,
     isFree: false,
     p: 'Nome',
