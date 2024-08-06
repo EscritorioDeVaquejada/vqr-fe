@@ -1,4 +1,4 @@
-import { Fields } from '../../hooks/useLogin/types';
+import { Fields } from './types';
 
 const fieldsData: Fields = {
   username: {

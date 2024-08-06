@@ -1,15 +1,28 @@
 'use client';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import { ArrowLeft } from '@/assets';
-import { Button, Input, Multi } from '@/components';
+import { Button, ErrorMessages, Input, Multi } from '@/components';
 import PhotoUploader from '@/components/PhotoUploader';
+import { File, SelectedImage } from '@/components/PhotoUploader/types';
 import { useNewClientStore } from '@/store';
 
 import styles from './page.module.scss';
 
 const page = () => {
-  const {} = useNewClientStore();
+  const {
+    fields,
+    errors,
+    handleName,
+    handleAddress,
+    handleCPF,
+    handleProfileImage,
+    submitNewClient,
+  } = useNewClientStore();
+
+  const handleUploadPhoto = (file: SelectedImage) => {
+    handleProfileImage({ profileImage: file });
+  };
 
   return (
     <div className={styles.container}>
@@ -25,16 +38,45 @@ const page = () => {
       <h1 className={styles.heading}>Novo Cliente</h1>
       <div className={styles.labelPhotoContainer}>
         <span>Foto de Perfil</span>
-        <PhotoUploader />
+        <PhotoUploader
+          onChange={handleUploadPhoto}
+          errorMessage={fields.profileImage.invalidText}
+        />
       </div>
-      <form className={styles.form}>
-        <Input name="name" label="Nome" placeholder="Informe seu nome" />
-        <Input name="cpf" label="CPF" placeholder="000000000-00" />
-        <Input name="address" label="Endereco" />
+      <form className={styles.form} onSubmit={submitNewClient}>
+        <Input
+          name="name"
+          label="Nome"
+          placeholder="Informe seu nome"
+          value={fields.name.value}
+          onChange={handleName}
+          errorMessage={fields.name.invalidText}
+        />
+        <Input
+          name="cpf"
+          label="CPF"
+          placeholder="000000000-00"
+          value={fields.cpf.value}
+          onChange={handleCPF}
+          errorMessage={fields.cpf.invalidText}
+        />
+        <Input
+          name="address"
+          label="Endereço"
+          value={fields.address.value}
+          onChange={handleAddress}
+          errorMessage={fields.address.invalidText}
+        />
         <Multi>
-          <Button type="button" label="Cancelar" color="tertiary" />
-          <Button type="button" label="Confirmar" isDisabled />
+          <Button
+            type="button"
+            label="Cancelar"
+            color="tertiary"
+            href="/clients"
+          />
+          <Button type="submit" label="Confirmar" />
         </Multi>
+        <ErrorMessages messages={errors} />
       </form>
     </div>
   );
