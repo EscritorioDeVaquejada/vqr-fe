@@ -7,20 +7,21 @@ export type File = {
   type: string;
 };
 
-export type SelectedImage =
-  | {
-      error: boolean;
-      file: File;
-      id: string;
-      name: string;
-      preview: string;
-      progress: number;
-      readableSize: string;
-      uploaded: boolean;
-      url: string | null;
-    }
-  | undefined;
+export type Image = {
+  error: boolean;
+  file: File;
+  id: string;
+  name: string;
+  preview: string;
+  progress: number;
+  readableSize: string;
+  uploaded: boolean;
+  url: string | null;
+};
+
+export type SelectedImage = Image | undefined;
 
 export type PhotoUploadedProps = {
   onChange: (photo: SelectedImage | undefined) => void;
+  errorMessage?: string;
 };

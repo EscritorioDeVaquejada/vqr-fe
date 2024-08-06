@@ -11,7 +11,7 @@ import { ACCEPTED_FILE_EXTENSIONS } from '@/constants';
 import styles from './index.module.scss';
 import { File, PhotoUploadedProps, SelectedImage } from './types';
 
-const PhotoUploader: FC<PhotoUploadedProps> = ({ onChange }) => {
+const PhotoUploader: FC<PhotoUploadedProps> = ({ onChange, errorMessage }) => {
   const [selectedImage, setSelectedImage] = useState<SelectedImage>();
   const [isFileRejected, setIsFileRejected] = useState(false);
 
@@ -78,6 +78,7 @@ const PhotoUploader: FC<PhotoUploadedProps> = ({ onChange }) => {
           )}
         </div>
       )}
+      {errorMessage && <p className={styles.errorMessage}>{errorMessage}</p>}
     </div>
   );
 };
