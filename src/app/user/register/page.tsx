@@ -2,11 +2,21 @@
 
 import React, { MouseEvent, useState } from 'react';
 
-import { Button, Input, IrreversibleModal } from '@/components';
+import { Button, ErrorMessages, Input, IrreversibleModal } from '@/components';
+import { useUserRegisterStore } from '@/store';
 
 import styles from './page.module.scss';
 
 const page = () => {
+  const {
+    fields,
+    errors,
+    handleCPF,
+    handleName,
+    handlePassword,
+    submitUserRegister,
+  } = useUserRegisterStore();
+
   const [canSubmit, setCanSubmit] = useState(true);
   const [isResetPasswordsModalOpen, setIsResetPasswordsModalOpen] =
     useState(false);
@@ -39,22 +49,40 @@ const page = () => {
         />
       )}
       <h1>Novo Usuário</h1>
-      <form className={styles.form}>
-        <Input name="name" label="Nome" placeholder="Informe seu nome" />
-        <Input name="cpf" label="CPF" placeholder="000000000-00" />
+      <form className={styles.form} onSubmit={submitUserRegister}>
+        <Input
+          name="name"
+          label="Nome"
+          placeholder="Informe seu nome"
+          value={fields.name.value}
+          errorMessage={fields.name.invalidText}
+          onChange={handleName}
+        />
+        <Input
+          name="cpf"
+          label="CPF"
+          placeholder="000000000-00"
+          value={fields.cpf.value}
+          errorMessage={fields.cpf.invalidText}
+          onChange={handleCPF}
+        />
         <Input
           name="password"
           label="Senha"
           placeholder="*********"
           type="password"
+          value={fields.password.value}
+          errorMessage={fields.password.invalidText}
+          onChange={handlePassword}
         />
         <Button type="submit" label="Cadastrar" />
         <Button
-          type="submit"
+          type="button"
           label="Resetar todas as senhas"
           color="alert"
           onClick={handleConfirmResetPasswordsModal}
         />
+        <ErrorMessages messages={errors} />
       </form>
     </div>
   );
