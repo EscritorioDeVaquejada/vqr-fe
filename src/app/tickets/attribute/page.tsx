@@ -14,7 +14,7 @@ import {
 } from '@/components';
 import { useTicketAttributeStore } from '@/store';
 
-import { brazilState } from './data';
+import { brazilStates } from '@/data/states';
 import styles from './page.module.scss';
 import { CompletedFormProps } from './types';
 
@@ -160,7 +160,7 @@ const page = () => {
             placeholder="Estado"
             name="state"
             label="Estado"
-            items={brazilState}
+            items={brazilStates}
             onChange={handleState}
             errorMessage={fields.state.invalidText}
           />

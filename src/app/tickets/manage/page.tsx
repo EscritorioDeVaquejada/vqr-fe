@@ -19,18 +19,7 @@ const page = () => {
         <form className={styles.form}>
           <div className={styles.inputButtonContainer}>
             <Input label="Adicionar Senhas" name="addTickets" placeholder="0" />
-            <Button type="button" label="Confirmar" />
-          </div>
-          <div
-            className={`${styles.inputButtonContainer} ${styles.inputButtonContainerCenter}`}
-          >
-            <Input
-              label="Remover Senhas"
-              name="removeTickets"
-              placeholder="0"
-              hint="Senhas Vendidas não serão removidas"
-            />
-            <Button type="button" label="Confirmar" />
+            <Button type="submit" label="Confirmar" />
           </div>
         </form>
       </div>

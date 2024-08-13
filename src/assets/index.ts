@@ -29,3 +29,4 @@ export { default as CashBlack } from './cash-black.svg';
 export { default as CardBlack } from './card-black.svg';
 export { default as BlockRed } from './block-red.svg';
 export { default as CloseDarkBlue } from './close-dark-blue.svg';
+export { default as Calendar } from './calendar.svg';

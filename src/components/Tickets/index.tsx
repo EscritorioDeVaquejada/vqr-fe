@@ -13,7 +13,7 @@ const Cell: FC<CellProps> = ({ ticket, selectedTicket, index, onChange }) => {
   const newSelected = isSelected ? styles.newListItemSelected : '';
 
   if (isSelected) {
-    console.log({ isSelected, newSelected });
+    // console.log({ isSelected, newSelected });
   }
 
   const handleSelectCell = () => {

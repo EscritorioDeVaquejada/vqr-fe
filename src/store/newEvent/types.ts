@@ -1,3 +1,4 @@
+import { Value } from '@/components/Calendar/types';
 import { FormEvent } from 'react';
 import { ZodError } from 'zod';
 
@@ -7,7 +8,7 @@ export type Fields = {
     invalidText?: string;
   };
   date: {
-    value: string;
+    value: Value;
     invalidText?: string;
   };
   amount: {

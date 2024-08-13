@@ -357,6 +357,7 @@ const useTicketsAttributeStore = create<TicketsAttributeStore>((set, get) => ({
       handleErrors(validated.error);
       return;
     }
+    console.log({ fields });
 
     try {
       const hasAttributedTicket = await attributeTicket({

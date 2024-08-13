@@ -1,0 +1,19 @@
+.container {
+  position: relative;
+  display: flex;
+}
+
+.toggler {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 0.5rem;
+  top: 20%;
+  cursor: pointer;
+}
+
+.calendar {
+  position: absolute;
+  top: 4rem;
+  z-index: 3;
+}

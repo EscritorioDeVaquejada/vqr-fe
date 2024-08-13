@@ -2,7 +2,7 @@
 import React from 'react';
 
 import { ArrowLeft } from '@/assets';
-import { Button, Input, Multi } from '@/components';
+import { Button, Calendar, Input, Multi } from '@/components';
 import { useNewEventStore } from '@/store';
 
 import styles from './page.module.scss';
@@ -45,14 +45,16 @@ const page = () => {
           errorMessage={fields.eventName.invalidText}
           onChange={handleEventName}
         />
-        <Input
+        {/* <Input
           name="date"
           label="Data"
           placeholder="00/00/00"
           value={fields.date.value}
           errorMessage={fields.date.invalidText}
           onChange={handleDate}
-        />
+        /> */}
+
+        <Calendar onChange={handleDate} value={fields.date.value} />
         <Input
           name="amount"
           label="Valor da Senha"

@@ -1,15 +1,15 @@
+import { redirect } from 'next/navigation';
+import { FormEvent } from 'react';
+import { ZodError } from 'zod';
 import { create } from 'zustand';
 
+import { SelectedImage } from '@/components/PhotoUploader/types';
 import { VQR_BACKEND } from '@/constants';
 import { fetch } from '@/services';
 
-import { NewClientStore, RegisterNewClientParams } from './types';
 import fieldsData from './data';
-import { ZodError } from 'zod';
-import { FormEvent } from 'react';
-import { redirect } from 'next/navigation';
+import { NewClientStore, RegisterNewClientParams } from './types';
 import { NewClientZod } from './zod';
-import { SelectedImage } from '@/components/PhotoUploader/types';
 
 const useNewClientStore = create<NewClientStore>((set, get) => ({
   fields: fieldsData,
@@ -137,6 +137,8 @@ const useNewClientStore = create<NewClientStore>((set, get) => ({
       handleErrors(validated.error);
       return;
     }
+
+    console.log({ fields });
 
     try {
       const newClient = await registerNewClient({

@@ -8,7 +8,7 @@ const fieldsData: Fields = {
     value: '',
   },
   date: {
-    value: '',
+    value: new Date(),
   },
   boiTvAmountInAdvance: {
     value: '',
